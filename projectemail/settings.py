@@ -99,17 +99,16 @@ ROOT_URLCONF = 'projectemail.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [],  # You can add global template dirs here if any
+        'APP_DIRS': True,  # This tells Django to look inside app templates folders
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                # ...
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'projectemail.wsgi.application'
 

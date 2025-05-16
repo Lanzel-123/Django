@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Recommendations</title>
+</head>
+<body>
+    <h1>Recommendations based on "{{ base_title }}"</h1>
+    <ul>
+        {% for title in recommendations %}
+            <li>{{ title }}</li>
+        {% empty %}
+            <li>No recommendations found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
