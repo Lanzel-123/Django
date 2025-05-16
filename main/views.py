@@ -1,4 +1,11 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .recommender import get_recommendations
 
 def home(request):
-    return HttpResponse("<h1>Welcome to ProjectEmail</h1>")
+    recommended_titles = get_recommendations('Django for Beginners')
+    
+    context = {
+        'base_title': 'Django for Beginners',
+        'recommendations': recommended_titles
+    }
+    return render(request, 'home.html', context)
