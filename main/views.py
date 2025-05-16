@@ -8,4 +8,5 @@ def home(request):
         'base_title': 'Django for Beginners',
         'recommendations': recommended_titles
     }
-    return render(request, 'home.html', context)
+    return render(request, 'main/home.html')
+
