@@ -73,7 +73,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',  
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -81,6 +80,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',  # Use GitHub
     'users',
     'recommender',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -99,7 +99,7 @@ ROOT_URLCONF = 'projectemail.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'main' / 'templates'],  # Correct this if needed
+        'DIRS': [BASE_DIR / 'main' / 'templates'],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
